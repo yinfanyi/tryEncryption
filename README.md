@@ -15,10 +15,10 @@ python script.py generate public_key.pem private_key.pem
 
 加密文件：
 ```python
-python script.py encrypt 要加密的文件.txt 加密后的文件.txt
+python script.py encrypt 要加密的文件.txt 加密后的文件.txt public_key.pem
 ```
 
 解密文件：
 ```python
-python script.py encrypt 加密后的文件.txt 解密后的文件.txt
+python script.py encrypt 加密后的文件.txt 解密后的文件.txt private_key.pem
 ```
