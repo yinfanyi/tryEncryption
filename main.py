@@ -1,5 +1,6 @@
 from typing import Optional
-from PySide6.QtWidgets import QApplication, QWidget, QLineEdit, QVBoxLayout,QPushButton,QMainWindow
+import PySide6.QtCore
+from PySide6.QtWidgets import QApplication, QWidget, QLineEdit, QVBoxLayout,QPushButton,QMainWindow, QLabel
 from encrypt_ui import Ui_MainWindow
 from encrypt import Encrypt
 
@@ -8,12 +9,15 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         self.encrpyt = encrpyt
+        self.sub_window_config = SubWindowConfig()
+        
+        # self.clickCount_config = 0
         
         self.result = ''
         self.bind()
     
     def bind(self):
-        print('bind')
+        self.pushButton_setting.clicked.connect(lambda: self.sub_window_config.show())
         # self.pushButton_CopyDecodeContent.clicked.connect(lambda: self.copy_decode_content())
         # self.pushButton_0.clicked.connect(lambda: self.addNumber('0'))
         # self.pushButton_1.clicked.connect(lambda: self.addNumber('1'))
@@ -33,6 +37,14 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         # self.pushButton_equal.clicked.connect(self.equal)
         # self.pushButton_clc.clicked.connect(self.clear)
         # self.pushButton_backspace.clicked.connect(self.backspace)
+        
+    # def click_button_config(self):
+    #     self.clickCount_config += 1
+        
+    #     if self.clickCount_config % 2 == 1:
+    #         self.sub_window_config.show()
+    #     else:
+    #         self.sub_window_config.close()
     
     # def copy_decode_content(self):
     #     # self.plainTextEdit_inputEncode.clear()
@@ -58,8 +70,24 @@ class MyWindow(QMainWindow, Ui_MainWindow):
     #     self.result = self.result[:-1]
     #     self.display.setText(self.result) 
         
+class SubWindowConfig(QWidget):
+    def __init__(self) -> None:
+        super().__init__()
+        
+        self.lb = QLabel('配置') 
+        self.lineEdit = QLineEdit()
+        self.lineEdit.setText('配置密钥')
+        
+        self.mainLayout = QVBoxLayout()
+        self.mainLayout.addWidget(self.lb)
+        self.mainLayout.addWidget(self.lineEdit)
+        self.setLayout(self.mainLayout)
+        
+        
+        
+
 if __name__ == '__main__':
     app = QApplication([])
     window = MyWindow(encrpyt=Encrypt())
     window.show()
-    app.exec_()
+    app.exec()
