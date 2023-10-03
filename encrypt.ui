@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton_setting">
+   <widget class="QPushButton" name="pushButton_config">
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -95,32 +95,6 @@
      <string>清空内容</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_encrypt">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>9</y>
-      <width>51</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>加密</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radioButton_decrpyt">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>29</y>
-      <width>51</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>解密</string>
-    </property>
-   </widget>
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
@@ -160,6 +134,58 @@
      <string>复制解密内容</string>
     </property>
    </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>23</x>
+      <y>5</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QRadioButton" name="radioButton_decrpyt">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>解密</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_encrypt">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>加密</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <zorder>groupBox</zorder>
+   <zorder>pushButton_config</zorder>
+   <zorder>plainTextEdit_output</zorder>
+   <zorder>plainTextEdit_input</zorder>
+   <zorder>pushButton_CopyInput</zorder>
+   <zorder>pushButton_generate_keys</zorder>
+   <zorder>pushButton_clearInput</zorder>
+   <zorder>line</zorder>
+   <zorder>pushButton_clearOutput</zorder>
+   <zorder>pushButton_CopyOutput</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

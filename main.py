@@ -17,27 +17,31 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         self.bind()
     
     def bind(self):
-        self.pushButton_setting.clicked.connect(lambda: self.sub_window_config.show())
-        # self.pushButton_CopyDecodeContent.clicked.connect(lambda: self.copy_decode_content())
-        # self.pushButton_0.clicked.connect(lambda: self.addNumber('0'))
-        # self.pushButton_1.clicked.connect(lambda: self.addNumber('1'))
-        # self.pushButton_2.clicked.connect(lambda: self.addNumber('2'))
-        # self.pushButton_3.clicked.connect(lambda: self.addNumber('3'))
-        # self.pushButton_4.clicked.connect(lambda: self.addNumber('4'))
-        # self.pushButton_5.clicked.connect(lambda: self.addNumber('5'))
-        # self.pushButton_6.clicked.connect(lambda: self.addNumber('6'))
-        # self.pushButton_7.clicked.connect(lambda: self.addNumber('7'))
-        # self.pushButton_8.clicked.connect(lambda: self.addNumber('8'))
-        # self.pushButton_9.clicked.connect(lambda: self.addNumber('9'))
-        # self.pushButton_plus.clicked.connect(lambda: self.addNumber('+'))
-        # self.pushButton_minus.clicked.connect(lambda: self.addNumber('-'))
-        # self.pushButton_multi.clicked.connect(lambda: self.addNumber('*'))
-        # self.pushButton_divide.clicked.connect(lambda: self.addNumber('/'))
-        # self.pushButton_point.clicked.connect(lambda: self.addNumber('.'))
-        # self.pushButton_equal.clicked.connect(self.equal)
-        # self.pushButton_clc.clicked.connect(self.clear)
-        # self.pushButton_backspace.clicked.connect(self.backspace)
+        self.pushButton_config.clicked.connect(lambda: self.sub_window_config.show())
+        self.pushButton_clearInput.clicked.connect(lambda: self.plainTextEdit_input.clear())    
+        self.pushButton_clearOutput.clicked.connect(lambda: self.plainTextEdit_output.clear())  
+        self.pushButton_CopyInput.clicked.connect(lambda: self.copy_input_button())
+        self.pushButton_CopyOutput.clicked.connect(lambda: self.copy_output_button())
+        self.pushButton_generate_keys.clicked.connect(lambda: self.generate_keys_button())
         
+        self.radioButton_decrpyt.toggled.connect(lambda: self.decrpyt_button()) 
+        self.radioButton_encrypt.toggled.connect(lambda: self.encrypt_button())
+    
+    def copy_input_button(self):
+        pass
+        
+    def copy_output_button(self):
+        pass
+    
+    def generate_keys_button(self):
+        pass
+    
+    def decrpyt_button(self):
+        print("decrypt!") 
+    
+    def encrypt_button(self):
+        print("encrypt!!")
+    
     # def click_button_config(self):
     #     self.clickCount_config += 1
         
