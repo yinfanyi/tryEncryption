@@ -14,7 +14,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
     
     def bind(self):
         print('bind')
-        self.pushButton_CopyDecodeContent.clicked.connect(lambda: self.copy_decode_content())
+        # self.pushButton_CopyDecodeContent.clicked.connect(lambda: self.copy_decode_content())
         # self.pushButton_0.clicked.connect(lambda: self.addNumber('0'))
         # self.pushButton_1.clicked.connect(lambda: self.addNumber('1'))
         # self.pushButton_2.clicked.connect(lambda: self.addNumber('2'))
@@ -34,12 +34,12 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         # self.pushButton_clc.clicked.connect(self.clear)
         # self.pushButton_backspace.clicked.connect(self.backspace)
     
-    def copy_decode_content(self):
-        # self.plainTextEdit_inputEncode.clear()
-        decode_content = self.encrpyt.copy_decode_content()
-        current_text = self.plainTextEdit_inputEncode.toPlainText()
-        new_text = current_text + "\n" + decode_content  
-        self.plainTextEdit_inputEncode.setPlainText(new_text)
+    # def copy_decode_content(self):
+    #     # self.plainTextEdit_inputEncode.clear()
+    #     decode_content = self.encrpyt.copy_decode_content()
+    #     current_text = self.plainTextEdit_inputEncode.toPlainText()
+    #     new_text = current_text + "\n" + decode_content  
+    #     self.plainTextEdit_inputEncode.setPlainText(new_text)
                 
     # def addNumber(self,number):
     #     self.display.clear()

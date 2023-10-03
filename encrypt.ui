@@ -6,87 +6,61 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>524</width>
-    <height>330</height>
+    <width>650</width>
+    <height>505</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="line_seed">
+   <widget class="QPushButton" name="pushButton_setting">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>140</x>
       <y>10</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>配置</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit_output">
+    <property name="geometry">
+     <rect>
+      <x>331</x>
+      <y>50</y>
       <width>311</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0000</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="Button_get_publicKey">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>8</y>
-      <width>75</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>复制公钥</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_inputEncode">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>371</width>
-      <height>111</height>
+      <height>381</height>
      </rect>
     </property>
     <property name="toolTip">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;请输入待加密文本&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="plainText">
-     <string>请输入待加密纯文本</string>
+     <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_CopyDecodeContent">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>120</y>
-      <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>复制加密内容</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_inputDecode">
+   <widget class="QPlainTextEdit" name="plainTextEdit_input">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>170</y>
-      <width>371</width>
-      <height>111</height>
+      <y>50</y>
+      <width>311</width>
+      <height>381</height>
      </rect>
     </property>
     <property name="plainText">
-     <string>请输入已加密内容</string>
+     <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_CopyDecodeContent_2">
+   <widget class="QPushButton" name="pushButton_CopyInput">
     <property name="geometry">
      <rect>
-      <x>402</x>
-      <y>246</y>
+      <x>240</x>
+      <y>440</y>
       <width>91</width>
       <height>21</height>
      </rect>
@@ -95,82 +69,95 @@
      <string>复制解密内容</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_SetPrivateKey">
+   <widget class="QPushButton" name="pushButton_generate_keys">
     <property name="geometry">
      <rect>
-      <x>402</x>
-      <y>201</y>
+      <x>470</x>
+      <y>10</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>生成密钥</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_clearInput">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>440</y>
       <width>91</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>设置私钥</string>
+     <string>清空内容</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QRadioButton" name="radioButton_encrypt">
     <property name="geometry">
      <rect>
-      <x>419</x>
-      <y>41</y>
+      <x>30</x>
+      <y>9</y>
       <width>51</width>
-      <height>16</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>加密信息</string>
+     <string>加密</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QRadioButton" name="radioButton_decrpyt">
     <property name="geometry">
      <rect>
-      <x>421</x>
-      <y>170</y>
+      <x>30</x>
+      <y>29</y>
       <width>51</width>
-      <height>16</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>解密信息</string>
+     <string>解密</string>
     </property>
    </widget>
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>150</y>
-      <width>391</width>
-      <height>20</height>
+      <x>316</x>
+      <y>50</y>
+      <width>20</width>
+      <height>381</height>
      </rect>
     </property>
     <property name="orientation">
-     <enum>Qt::Horizontal</enum>
+     <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QPushButton" name="pushButton_clearOutput">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>11</y>
-      <width>81</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>密钥生成种子：</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_setPublicKey">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>70</y>
+      <x>450</x>
+      <y>440</y>
       <width>91</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>设置公钥</string>
+     <string>清空内容</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_CopyOutput">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>440</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>复制解密内容</string>
     </property>
    </widget>
   </widget>
@@ -179,7 +166,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>524</width>
+     <width>650</width>
      <height>22</height>
     </rect>
    </property>
@@ -193,25 +180,17 @@
     <addaction name="separator"/>
     <addaction name="actionExit"/>
    </widget>
-   <widget class="QMenu" name="menuEdit">
+   <widget class="QMenu" name="menuSetting">
     <property name="title">
-     <string>Edit</string>
+     <string>Setting</string>
     </property>
-    <addaction name="actionAlgorithm"/>
     <addaction name="separator"/>
     <addaction name="actionset_public_key"/>
     <addaction name="actionset_private_key"/>
    </widget>
-   <widget class="QMenu" name="menuHelp">
-    <property name="title">
-     <string>Help</string>
-    </property>
-   </widget>
    <addaction name="menuopen"/>
-   <addaction name="menuEdit"/>
-   <addaction name="menuHelp"/>
+   <addaction name="menuSetting"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <action name="actionOpen_File">
    <property name="text">
     <string>Open File...</string>
